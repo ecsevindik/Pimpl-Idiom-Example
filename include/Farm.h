@@ -15,6 +15,13 @@ public:
 private:
     struct Impl;
     std::unique_ptr<Impl> pimpl;
+
+    struct ImplAdvanced;
+    struct ImplAdvancedDeleter {
+        void operator()(ImplAdvanced*);
+    };
+    std::unique_ptr<ImplAdvanced, ImplAdvancedDeleter> pimplAdv;
+
     std::string m_name;
 };
 
