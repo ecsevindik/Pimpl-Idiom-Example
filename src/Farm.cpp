@@ -17,7 +17,7 @@ Farm::Farm(const std::string& farmName)
 
 }
 
-Farm::~Farm() = default;
+Farm::~Farm() = default; // This has to be defined here because of unique_ptr of Impl. Destructor must be in the same place where Impl is defined
 
 void Farm::putAnimalsInSleep() {
     pimpl->m_dog.sleep();
