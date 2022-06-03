@@ -14,13 +14,13 @@ public:
 
 private:
     struct Impl;
-    std::unique_ptr<Impl> pimpl;
+    std::unique_ptr<Impl> pimpl; // Unique pointer to Impl
 
     struct ImplAdvanced;
     struct ImplAdvancedDeleter {
         void operator()(ImplAdvanced*);
     };
-    std::unique_ptr<ImplAdvanced, ImplAdvancedDeleter> pimplAdv;
+    std::unique_ptr<ImplAdvanced, ImplAdvancedDeleter> pimplAdv; // Unique pointer to Impl with custom deleter
 
     std::string m_name;
 };
