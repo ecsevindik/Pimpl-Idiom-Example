@@ -3,6 +3,7 @@ Basic Pointer-To-Implementation (Pimpl) Example with using unique pointer.
 
 When using the Pimpl idiom, define special member functions in the implementation file.
 
+Tested both on Ubuntu 20.04 and Windows 10
 # Requirements
     * CMake
     * Gcc or Clang compiler
